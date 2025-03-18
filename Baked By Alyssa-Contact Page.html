@@ -1,0 +1,139 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+			<script src="script.js"></script>
+
+</head>
+<body>
+
+<div class="sections2">
+	
+<div id="gradient1" class="header">
+ <a href="#default" class="logo"><img src="Images/BBA-logo-noBG.png" width="100%" height="" alt=""/></a>
+  <div class="header-right">
+    <a href="index.html">Home</a>
+	<a href="Baked By Alyssa-About Page.html">About</a>
+    <a href="Baked By Alyssa-Chocolate Page.html">Chocolate<br>Covered</a>
+	<a href="Baked By Alyssa-Baked Page.html">Baked<br>Goods</a>
+	<a class="active" href="Baked By Alyssa-Contact Page.html">Contact</a>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <script>
+   function toggleMenu() {
+  const headerRight = document.querySelector('.header-right');
+  headerRight.classList.toggle('active');
+}
+  </script>
+  
+</div>
+</div><br>
+	
+	<section class="contact">
+		<div class="content">
+			<h2>Contact Me</h2>
+			
+		</div>
+		<div class="container">
+			<div class="contactInfo">
+				<div class="box">
+					<div class="icon"><i class="fa-solid fa-map"></i></div>
+					<div class="text">
+						<h3>Location:</h3>
+						<p>North Stockton CA,</p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="icon"><i class="fa-solid fa-phone"></i></div>
+					<div class="text">
+						<h3>Phone Number:</h3>
+						<p>209-423-0431</p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="icon"><i class="fa-solid fa-envelope"></i></div>
+					<div class="text">
+						<h3>Email:</h3>
+						<p>Alyssacx01@icloud.com</p>
+					</div>
+				</div>
+				<div class="box">
+					<div class="icon"><i class="fa-brands fa-square-instagram"></i></div>
+					<div class="text">
+						<h3>Social Media:</h3>
+						<p class="textWhite"><a href="https://www.instagram.com/bakedbyalyssaaa?igsh=NTc4MTIwNjQ2YQ==" target="_blank">BakedbyAlyssaaa</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="contactForm">
+				<form action="https://formspree.io/f/xovevgwz"
+				method="POST">
+					<h2>Send Message</h2>
+					<div class="inputBox">
+						
+						  <label for="Treats">Choose a treat to order:</label>
+						  <select name="Treats" id="Treats" required="required">
+							 <option value="None">None</option>
+							<option value="Chocolate covered Strawberries">Chocolate covered Strawberries</option>
+							<option value="Chocolate-covered Oreos">Chocolate-covered Oreos</option>
+							<option value="Chocolate-covered Pretzels">Chocolate-covered Pretzels</option>
+							<option value="Chocolate-covered Rice Krispies">Chocolate-covered Rice Krispies</option>
+							<option value="Chocolate-covered Cakepops">Chocolate-covered Cakepops</option>
+							<option value="Chocolate-covered Cakesicles">Chocolate-covered Cakesicles</option>
+							<option value="Chocolate-covered Breakable heart w/ six berries">Chocolate-covered Breakable heart w/ six berries</option>
+							<option value="Chocolate-covered Breakable Hello Kitty">Chocolate-covered Breakable Hello Kitty</option>
+							<option value="Cookies">Cookies</option>
+							<option value="Brownies">Brownies</option>
+							<option value="Loaded brownies">Loaded brownies</option>
+							<option value="Churro Cheesecake Plain">Churro Cheesecake Plain</option>
+							<option value="Churro Cheesecake w/ two toppings">Churro Cheesecake w/ two toppings</option>
+							<option value="10-inch cheesecake">10-inch cheesecake</option>
+							<option value="Mini Cheesecake">Mini Cheesecake</option>
+							<option value="Flans">Flans</option>
+							<option value="Cake">Cake</option>
+							<option value="Cupcakes">Cupcakes</option>
+							  <option value="Mini Cupcakes">Mini Cupcakes</option>
+						  </select>
+			
+					</div>
+					<div class="inputBox">
+						<input type="text" name="Name" required="required">
+						<span>Full Name</span>
+					</div>
+					<div class="inputBox">
+						<input type="text" name="Instagram" required="required">
+						<span>Instagram:</span>
+					</div>
+					<div class="inputBox">
+						<input type="text" name="Phone Number" required="required">
+						<span>Phone Number:</span>
+					</div>
+					<div class="inputBox">
+						<textarea required="required" name="specifications" ></textarea>
+						<span>Type the specifications for your desired treat <b>(Color/Filling/Amount)</b></span>
+					</div>
+					<div class="inputBox">
+						<textarea required="required" name="Dietary Restriction"></textarea>
+						<span><b>Please list dietary restriction if applicable (If no please type N/A):</b></span>
+					</div>
+					<div class="inputBox">
+						<input type="submit" name="" value="Send">
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+<br>
+<footer class="footer"><center><p><br>
+BakedByAlyssaaa ©2025 all rights reserved.</p> <img src="Images/current_logo-removebg-preview.png" width="10%" alt=""> </center>
+</footer>	
+</body>
+</html>

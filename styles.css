@@ -1,0 +1,764 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	box-sizing: border-box;
+}
+
+/*Code bellow for Font of text*/
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+	background: linear-gradient(to right, #FFB5C3, #FFE1E7 50%, #FFB5C3);
+}
+/*Code above for Font of text*/
+
+/*Code bellow used to change the color of the header from a solid color to a gradiant*/
+#gradient1 {
+ 
+  background-color: lightpink; /* For browsers that do not support gradients */
+  background-image: linear-gradient(white, pink);
+}
+/*Code above used to change the color of the header from a solid color to a gradiant*/
+
+
+/*Code above for Font of text*/
+
+/*Code bellow is for the header, header color, and hover feature for the navigation bar*/
+
+.header {
+  overflow: hidden;
+  background-color: #FDB0C0;
+  padding: 13px 10px;
+  margin-bottom: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+	min-width: 600px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 25px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 15px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+ width: 220px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+   padding: 1px;
+
+}
+.header a.logo:hover {
+  width: 220px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+   padding: 1px;
+  background-color: #FB7B96;
+  color: black;
+
+
+}
+.header a:hover {
+  background-color: #FB7B96;
+  color: black;
+  padding: 25px;
+
+}
+
+.header a.active {
+  background-color: #E17284;
+  color: white;
+  padding: 25px;
+}
+
+.header-right {
+  float: right;
+}
+
+/*@media screen and (max-width: 736px) {
+  .header {
+  	overflow: hidden;
+  	background-color: #FDB0C0;
+  	padding: 9px 10px;
+  	margin-bottom: 10px;
+
+  	width: 20%;
+  	z-index: 10;
+	  font-size: 12px;
+	}
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header a:hover {
+  	background-color: #FB7B96;
+  	color: black;
+	padding: 12px;
+	font-size: 12px;
+
+}
+.header a.active {
+  background-color: #E17284;
+  color: white;
+  padding: 12px;
+  font-size: 12px;
+}
+  .header-right {
+    float: right;
+  }
+} */
+
+/*Code above is for the header, header color, and hover feature for the navigation bar*/
+
+/*Code bellow is for the columns used to split up the pages*/
+.column {
+  float: left;
+  width: 50%;
+  padding: 25px;
+}
+.column_nopad {
+  float: left;
+  width: 50%;
+  padding: 1px;
+}
+
+.column_25 {
+  float: left;
+  width: 25%;
+  padding: 20px;
+}
+.column_25_1 {
+  float: left;
+  width: 25%;
+  padding: 20px;
+  background-color: #FFBFCC;
+}
+.column_20 {
+  float: left;
+  width: 20%;
+  padding: 5px;
+  background-color: aqua;
+}
+.column_80 {
+  float: left;
+  width: 80%;
+  padding: 5px;
+  
+}
+.column_33 {
+  float: left;
+  width: 33%;
+  padding: 35px;
+}
+
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*Code above is for the columns used to split up the pages*/
+
+/*Code bellow is for the hero image and allows the button to rest over the image*/
+.hero {
+  position: relative; /* Ensure this is relative for the button positioning */
+  height: 100vh;
+  overflow: hidden; /* Ensures no overflow */
+  z-index: 1; /* Optional: sets the z-index lower than header */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the area */
+}
+
+.hero-button {
+    position: absolute;
+    bottom: 50px; /* Distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    background-color: #000000; /* Button color */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+
+.hero-button:hover {
+    background-color: #0056b3;
+}
+/*Code above is for the hero image and allows the button to rest over the image*/
+
+/*Code bellow is used to section off the navigation bar from the first section bellow it*/
+.sections2{
+	padding-bottom: 5%;
+}
+/*Code above is used to section off the navigation bar from the first section bellow it*/
+
+/*Code bellow is used to display the individual images of treats and blur the image as the opacity darkens so words can show*/
+.image-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.image {
+	position: relative;
+	width: 45%;
+	border-radius: 20px;
+}
+.imageFace {
+	position: relative;
+	width: 65%;
+	border-radius: 20px;
+}
+.image, .aboutImage img {
+    border: 5px solid #FDB0C0; /* Blue border */
+    border-radius: 20px; /* Keeps the rounded edges */
+    padding: 5px; /* Adds some spacing inside the border */
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5); /* Soft blue glow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover, .aboutImage img:hover {
+    transform: scale(1.00); /* Slight zoom effect on hover */
+    box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.8); /* Stronger glow on hover */
+}
+.image__img {
+	display: block;
+	width: 100%;
+	border-radius: 20px;
+
+}
+.image__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.25s;
+	border-radius: 20px;
+}
+.image__overlay > * {
+	transform: translateY(20px);
+	transition: transform 0.25s;
+}
+.image__overlay:hover {
+	opacity: 1;
+}
+.image__overlay--blur {
+	backdrop-filter: blur(2.5px);
+}
+.image__overlay:hover > * {
+	transform: translateY(0px);
+
+}
+.image__title {
+	font-size: 2em;
+	font-weight: bold;
+}
+.image__description {
+	font-size: 1.2em;
+	margin-top: 0.25em;
+}
+/*Code above is used to display the individual images of treats and blur the image as the opacity darkens so words can show*/
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.contact 
+{
+	position: relative;
+	min-height: 100vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-image: linear-gradient(rgba(0,9,30,0.7),rgba(0,9,30,0.2)),url("Images/fruit star.jpeg");
+	background-size: cover;
+}
+.contact .content
+{
+	max-width: 800px;
+	text-align: center;
+}
+.contact .content h2
+{
+	font-size: 36px;
+	font-weight: 500;
+	color: #fff;
+}
+.contact .content p
+{
+	font-weight: 300;
+	color: #fff;
+}
+.container
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px; 
+}
+
+.container .contactInfo 
+{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.container .contactInfo .box
+{
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+}
+.container .contactInfo .box .icon
+{
+	min-width: 60px;
+	height: 60px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+}
+.container .contactInfo .box .text
+{
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	color: #fff;
+	flex-direction: column;
+	font-weight: 300;
+
+}
+.container .contactInfo .box .text h3
+{
+	font-weight: 500;
+	color: #00bcd4;
+}
+.contactForm
+{
+	width: 40%;
+	padding: 40px;
+	background: #fff;
+	opacity: 90%;
+	border-radius: 5%;
+}
+.contactForm h2
+{
+	font-size: 30px;
+	color: #333;
+	font-weight: 500;
+}
+.contactForm .inputBox
+{
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	resize: none;
+}
+.contactForm .inputBox span
+{
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	pointer-events: none;
+	transition: 0.5s;
+	color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+
+{
+	color: #e91e63;
+	font-size: 12px;
+	transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]
+{
+	width: 100px;
+	background: #00bcd4;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 18px;
+}
+@media (max-width: 991px)
+{
+	.contact
+	{
+		padding: 50px;
+	}
+	.container
+	{
+		flex-direction:column;
+	}
+	.container .contactInfo
+	{
+		margin-bottom: 40px;
+	}
+	.container .contactInfo,
+	.contactForm
+	{
+		width: 100%;
+	}
+}
+.textWhite
+{
+	color: #FFF;
+}
+
+.main_container {
+	width: 100%;
+	background: #FFF;
+	box-shadow: 10px 10px 5px #b8d8dd;
+	border: thin;
+	border-color: black;
+	border-style: hidden;
+	border-radius: 6%;
+	padding: 8px;
+	margin: 0;
+}
+
+img {
+	border-radius: 6%;
+}
+.menuImage {
+	width: 100%;
+	padding: 2px;
+}
+.menuImage_cake {
+	width: 100%;
+	padding: 4px;
+}
+.fa {
+	color: #EBC600;
+}
+.fa:hover {
+	color: #FFE870;
+}
+
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+/*Next& previous buttons*/
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+/*Position the "next button" to the right*/
+.next{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through*/
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8)
+}
+
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transform: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+	.prev, .next,.text {font-size: 11px}
+}
+.heading {
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	margin: 20px auto;
+}
+.heading h1 {
+	font-size: 50px;
+	color: #000;
+	margin-bottom: 25px;
+	position: relative;
+}
+.heading h1::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	display: block;
+	margin: 0 auto;
+	background-color: #D70CD5;
+}
+.heading p {
+	font-size: 18px;
+	color: #666;
+	margin-bottom: 35px;
+}
+.containerAbout {
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px 20px;
+}
+.about {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.aboutImage {
+	flex: 1;
+	margin-right: 40px;
+	overflow: hidden;
+}
+.aboutImage img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	transition: 0.5s ease;
+}
+.aboutImage:hover img {
+
+	border-radius: 15px;
+}
+.aboutText {
+	flex: 1;
+}
+.aboutText h2 {
+	font-size: 23px;
+	margin-bottom: 15px;
+	color: #333;
+}
+.aboutText p {
+	font-size: 18px;
+	line-height: 1.5;
+	color: #666;
+}
+.aboutText .learnMore {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #FFAFC0;
+	color: #fff;
+	font-size: 19px;
+	text-decoration: none;
+	border-radius: 25px;
+	margin-top: 15px;
+	transition: 0.3s ease;
+}
+.aboutText .learnMore:hover {
+	background-color: #3e8e41;
+}
+@media screen and (max-width: 768px) {
+	.heading {
+		padding: 0px 20px;
+	}
+	.heading h1 {
+		font-size: 36px;
+	}
+	.heading p {
+		font-size: 17px;
+		margin-bottom: 0px;
+	}
+	.containerAbout {
+		padding: 0px;
+	}
+	.about {
+		padding: 20px;
+		flex-direction: column;
+	}
+	.aboutImage {
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+	.aboutText p {
+		padding: 0px;
+		font-size: 16px;
+	}
+	.aboutText .learnMore {
+		font-size: 16px;
+	}
+}
+.footer {
+	border: thin;
+	border-style: groove;
+	border-color: black;
+	padding-bottom: 10px;
+}
+
+/* Mobile stuff */
+
+@media (max-width: 768px) {
+	.header {
+	  display: flex;
+	  justify-content: space-between; /* Space out logo and hamburger */
+	  align-items: center; /* Vertically center items */
+	  padding: 10px;
+	  position: relative;
+	  overflow: visible;
+	  background-color: #FDB0C0; /* Optional: Add background color */
+	}
+  
+	.header-right {
+	  display: none;
+	  flex-direction: column;
+	  position: absolute;
+	  top: 100%; /* Position below the header */
+	  left: 0;
+	  width: 100%;
+	  background-color: #FDB0C0;
+	  z-index: 1000;
+	  padding: 10px 0;
+	}
+  
+	.header-right.active {
+	  display: flex;
+	}
+  
+	.header a {
+	  padding: 15px;
+	  text-align: center;
+	  width: 100%;
+	}
+  
+	.hamburger {
+	  display: flex;
+	  flex-direction: column;
+	  cursor: pointer;
+	  z-index: 1001;
+	  margin-left: auto; /* Push hamburger to the right */
+	}
+  
+	.hamburger span {
+	  width: 25px;
+	  height: 3px;
+	  background-color: black;
+	  margin: 4px 0;
+	}
+  }
+
+  @media (max-width: 768px) {
+	.banner {
+	  height: 50vh; /* Reduce height for mobile */
+	}
+	.banner-image {
+	  height: 50vh;
+	}
+  }
+
+  @media (max-width: 768px) {
+	.image-container {
+	  flex-direction: column;
+	  height: auto;
+	}
+	.image {
+	  width: 90%;
+	  margin-bottom: 20px;
+	}
+  }
+
+  @media (max-width: 768px) {
+	body {
+	  font-size: 14px;
+	}
+	.image__title {
+	  font-size: 1.5em;
+	}
+	.image__description {
+	  font-size: 1em;
+	}
+  }
+
+  @media (max-width: 768px) {
+	.footer img {
+	  width: 20%;
+	}
+  }

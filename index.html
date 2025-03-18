@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="styles.css">
+	<script src="script.js"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- Floating Music Notes Container -->
+  <div id="floating-notes"></div>
+	
+	<div class="sections2">
+<div id="gradient1" class="header">
+  <a href="#default" class="logo"><img src="Images/BBA-logo-noBG.png" width="100%" height="" alt="logo"/></a>
+  <div class="header-right">
+    <a class="active" href="index.html">Home</a>
+	<a href="Baked By Alyssa-About Page.html">About</a>
+    <a href="Baked By Alyssa-Chocolate Page.html">Chocolate<br>Covered</a>
+	<a href="Baked By Alyssa-Baked Page.html">Baked<br>Goods</a>
+	<a href="Baked By Alyssa-Contact Page.html">Contact</a>
+  </div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <script>
+   function toggleMenu() {
+  const headerRight = document.querySelector('.header-right');
+  headerRight.classList.toggle('active');
+}
+  </script>
+
+</div>
+
+
+	</div>
+	
+<div class="sections2">
+  
+  <div class="banner">
+    <img src="Images/Banner 1.png" alt="Banner Image 1" class="banner-image active">
+    <img src="Images/Banner 2.png" alt="Banner Image 2" class="banner-image">
+    <img src="Images/Banner 3.png" alt="Banner Image 3" class="banner-image">
+    <!--<a href="another-page.html" class="banner-button">Go to Another Page</a>-->
+  </div>
+<br>
+<style>
+	/* Reset default margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Banner container */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+/* Banner images */
+.banner-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire banner */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Active image */
+.banner-image.active {
+  opacity: 1;
+}
+
+/* Banner button */
+.banner-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  z-index: 10; /* Ensure the button is above the images */
+}
+
+.banner-button:hover {
+  background-color: #0056b3;
+}	
+</style>
+	
+<script>
+let currentIndex = 0;
+const images = document.querySelectorAll('.banner-image');
+const totalImages = images.length;
+
+function changeImage() {
+  // Remove the 'active' class from the current image
+  images[currentIndex].classList.remove('active');
+
+  // Increment the index and wrap around if necessary
+  currentIndex = (currentIndex + 1) % totalImages;
+
+  // Add the 'active' class to the next image
+  images[currentIndex].classList.add('active');
+}
+
+// Change the image every 5 seconds
+setInterval(changeImage, 3000);
+
+function changeImage() {
+  images[currentIndex].classList.remove('active');
+  currentIndex = (currentIndex + 1) % totalImages;
+  images[currentIndex].classList.add('active');
+}
+
+setInterval(changeImage, 3000);
+
+</script>
+
+        <a href="Baked By Alyssa-Contact Page.html" class="hero-button">Order Now</a>
+    </div>
+
+	
+<div class="sections2">
+<font size="+4"><b><center>Keep an eye out for monthly flash sales!!!</center></b></font><br>
+<div class="image-container">
+
+<div class="image">
+	<img class="image__img" src="Images/mini cakes.jpg" alt="mini cakes"/> 
+	<div class="image__overlay image__overlay--blur">
+		<div class="image__title">Mini Cakes</div>
+		<p class="image__description">
+			Mini versions of my most popular cake flavors
+		</p>
+	</div>
+</div>
+</div>
+	
+</div>
+	
+<div class="sections2">
+
+<div class="image-container">
+
+<div class="image">
+	<img class="image__img" src="Images/dubi cheesecake cups.jpg" alt="flan"/> 
+	<div class="image__overlay image__overlay--blur">
+		<div class="image__title">Dubai Chocolate Cheesecakes</div>
+		<p class="image__description">
+			A combination of the viral dubai chocolate bar and my classic cheesecake recipe
+		</p>
+	</div>
+</div>
+</div>
+	
+</div>
+
+<div class="sections2">
+
+<div class="image-container">
+
+<div class="image">
+	<img class="image__img" src="Images/cheesecake slice.jpg" alt="flan"/> 
+	<div class="image__overlay image__overlay--blur">
+		<div class="image__title">Cheesecake Slices</div>
+		<p class="image__description">
+			Individual slices of gourmet cheesecake
+		</p>
+	</div>
+</div>
+</div>
+	
+</div>
+	
+	
+	
+<footer class="footer"><center><p><br>
+BakedByAlyssaaa @2025 all rights reserved.</p><img src="Images/current_logo-removebg-preview.png" width="10%" alt=""> </center>
+</footer>
+ <style>
+        .note {
+            position: fixed;
+            bottom: -50px; 
+            font-size: 2rem;
+            animation: floatUp linear;
+        }
+
+        @keyframes floatUp {
+            to {
+                transform: translateY(-100vh); 
+            }
+        }
+	 
+    </style>
+    <script>
+        function createNote() {
+            const note = document.createElement("div");
+            note.classList.add("note");
+            note.textContent = "🎂"; // Music note emoji
+
+            // Randomly choose between left and right side
+            const isLeftSide = Math.random() < 0.5; // 50% chance for left or right
+
+            if (isLeftSide) {
+                // Restrict to the left 20% of the screen
+                note.style.left = `${Math.random() * 20}vw`; // Random position within left 20%
+            } else {
+                // Restrict to the right 20% of the screen
+                note.style.right = `${Math.random() * 20}vw`; // Random position within right 20%
+            }
+
+            note.style.animationDuration = `${Math.random() * 3 + 5}s`; // Random speed
+            document.getElementById("floating-notes").appendChild(note);
+
+            // Remove the note after it finishes animating
+            note.addEventListener("animationend", () => {
+                note.remove();
+            });
+        }
+
+        // Create notes at regular intervals
+        setInterval(createNote, 1000); // Adjust interval for more/less notes
+    </script>
+</body>
+</html>

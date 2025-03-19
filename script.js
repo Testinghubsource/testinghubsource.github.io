@@ -38,5 +38,5 @@ setInterval(autoSlide, 3000);
 
 function toggleMenu() {
 	const headerRight = document.querySelector('.header-right');
-	headerRight.classList.toggle('active');
+	headerRight.classList.toggle('stupid');
 }

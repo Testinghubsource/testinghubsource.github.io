@@ -704,7 +704,7 @@ img {vertical-align: middle;}
 		z-index: 1000;
 		padding: 10px 0;
 	  }
-  
+	
 	  .header-right.active {
 		display: flex; /* Show the navigation links when active */
 	  }

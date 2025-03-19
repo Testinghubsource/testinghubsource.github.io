@@ -10,6 +10,9 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 	background: linear-gradient(to right, #FFB5C3, #FFE1E7 50%, #FFB5C3);
+	overflow-x: hidden; /* Prevent horizontal scrolling */
+	width: 100%; /* Ensure the body takes up the full width */
+	max-width: 100%; /* Prevent content from exceeding the viewport width */
 }
 /*Code above for Font of text*/
 
@@ -489,6 +492,8 @@ img {vertical-align: middle;}
 	user-select: none;
 }
 
+
+
 /*Position the "next button" to the right*/
 .next{
 	right: 0;
@@ -824,5 +829,44 @@ img {vertical-align: middle;}
 	  width: 100%;
 	  padding: 12px;
 	  font-size: 16px;
+	}
+  }
+  @media (max-width: 768px) {
+	/* Constrain the dropdown width on mobile */
+	select {
+	  width: 100%;
+	  max-width: 100%;
+	  font-size: 16px; /* Ensure text is readable */
+	  box-sizing: border-box; /* Include padding and borders in the width */
+	}
+  
+	/* Allow dropdown options to wrap */
+	select option {
+	  white-space: normal;
+	  word-wrap: break-word;
+	}
+  }
+
+  @media (max-width: 768px) {
+	body, html {
+	  overflow-x: hidden; /* Prevent horizontal scrolling */
+	  width: 100%;
+	  max-width: 100%;
+	}
+  
+	.contactForm {
+	  width: 100%;
+	  max-width: 100%;
+	  padding: 10px; /* Reduce padding for smaller screens */
+	  box-sizing: border-box;
+	}
+  }
+
+  @media (max-width: 768px) {
+	.inputBox {
+	  width: 100%;
+	  max-width: 100%;
+	  padding: 0; /* Remove padding if necessary */
+	  margin: 0; /* Remove margins if necessary */
 	}
   }

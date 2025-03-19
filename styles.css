@@ -672,7 +672,7 @@ img {vertical-align: middle;}
 		padding: 10px 0;
 	  }
 	
-	  .header-right .stupid {
+	  .header-right .active {
 		display: flex; /* Show the navigation links when active */
 	  }
   

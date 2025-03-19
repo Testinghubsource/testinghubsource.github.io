@@ -886,6 +886,6 @@ img {vertical-align: middle;}
 	  width: 100%;
 	  max-width: 100%;
 	  padding: 0; /* Remove padding if necessary */
-	  margin: 0; /* Remove margins if necessary */
+	  margin: 0; /* Remove margins if necessary */ /* Remove margins if necessary */
 	}
   }

@@ -612,6 +612,7 @@ img {vertical-align: middle;}
 @media screen and (max-width: 768px) {
 	.heading {
 		padding: 0px 20px;
+		margin-top: 70px;
 	}
 	.heading h1 {
 		font-size: 36px;
@@ -655,10 +656,6 @@ img {vertical-align: middle;}
 		padding: 10px; /* Adjust padding for mobile */
 		overflow: visible; /* Ensure the navigation links are not clipped */
 	  }
-	.heading{
-		margin-top: 10px;
-	}
-  
 	.header a {
 	  padding: 10px;
 	  font-size: 16px;

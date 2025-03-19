@@ -35,3 +35,8 @@ function autoSlide() {
 
 // Set the interval for automatic slideshow (e.g., every 3 seconds)
 setInterval(autoSlide, 3000);
+
+function toggleMenu() {
+	const headerRight = document.querySelector('.header-right');
+	headerRight.classList.toggle('active');
+}

@@ -428,28 +428,7 @@ body {
 	padding: 10px;
 	font-size: 18px;
 }
-/*
-@media (max-width: 991px)
-{
-	.contact
-	{
-		padding: 50px;
-	}
-	.container
-	{
-		flex-direction:column;
-	}
-	.container .contactInfo
-	{
-		margin-bottom: 40px;
-	}
-	.container .contactInfo,
-	.contactForm
-	{
-		width: 100%;
-	}
-}
-*/
+
 .textWhite
 {
 	color: #FFF;
@@ -678,15 +657,17 @@ img {vertical-align: middle;}
 
 /* Mobile stuff */
 
+/* Mobile Header */
 @media (max-width: 768px) {
 	.header {
-	  display: flex;
-	  justify-content: space-between; /* Space out logo and hamburger */
-	  align-items: center; /* Vertically center items */
 	  padding: 10px;
 	  position: relative;
 	  overflow: visible;
-	  background-color: #FDB0C0; /* Optional: Add background color */
+	}
+  
+	.header a {
+	  padding: 10px;
+	  font-size: 16px;
 	}
   
 	.header-right {
@@ -703,12 +684,6 @@ img {vertical-align: middle;}
   
 	.header-right.active {
 	  display: flex;
-	}
-  
-	.header a {
-	  padding: 15px;
-	  text-align: center;
-	  width: 100%;
 	}
   
 	.hamburger {
@@ -751,16 +726,103 @@ img {vertical-align: middle;}
 	body {
 	  font-size: 14px;
 	}
+  
+	.image-container {
+	  flex-direction: column;
+	  height: auto;
+	}
+  
+	.image {
+	  width: 90%;
+	  margin-bottom: 20px;
+	}
+  
 	.image__title {
 	  font-size: 1.5em;
 	}
+  
 	.image__description {
 	  font-size: 1em;
 	}
   }
 
   @media (max-width: 768px) {
+	.footer {
+	  padding: 10px;
+	  text-align: center;
+	}
+  
 	.footer img {
 	  width: 20%;
+	}
+  
+	.footer p {
+	  font-size: 14px;
+	}
+  }
+
+  @media (max-width: 768px) {
+	.contact {
+	  padding: 20px;
+	}
+  
+	.container {
+	  flex-direction: column;
+	}
+  
+	.container .contactInfo,
+	.contactForm {
+	  width: 100%;
+	}
+  
+	.contactForm {
+	  padding: 20px;
+	  margin-top: 20px;
+	}
+  
+	.contactInfo .box {
+	  padding: 10px 0;
+	}
+  
+	.contactInfo .box .icon {
+	  min-width: 40px;
+	  height: 40px;
+	  font-size: 18px;
+	}
+  
+	.contactInfo .box .text {
+	  margin-left: 10px;
+	  font-size: 14px;
+	}
+  
+	.contactForm h2 {
+	  font-size: 24px;
+	}
+  
+	.contactForm .inputBox input,
+	.contactForm .inputBox textarea {
+	  font-size: 14px;
+	}
+  
+	.contactForm .inputBox span {
+	  font-size: 14px;
+	}
+  }
+
+  @media (max-width: 768px) {
+	.contactForm .inputBox input,
+	.contactForm .inputBox textarea {
+	  padding: 8px 0;
+	  font-size: 14px;
+	}
+  
+	.contactForm .inputBox span {
+	  font-size: 14px;
+	}
+  
+	.contactForm .inputBox input[type="submit"] {
+	  width: 100%;
+	  padding: 12px;
+	  font-size: 16px;
 	}
   }

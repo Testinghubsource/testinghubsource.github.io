@@ -651,9 +651,10 @@ img {vertical-align: middle;}
 /* Mobile Header */
 @media (max-width: 768px) {
 	.header {
-    min-width: unset; /* Remove fixed minimum width */
-    padding: 10px; /* Adjust padding for mobile */
-  }
+		min-width: unset; /* Remove fixed minimum width */
+		padding: 10px; /* Adjust padding for mobile */
+		overflow: visible; /* Ensure the navigation links are not clipped */
+	  }
   
 	.header a {
 	  padding: 10px;
@@ -664,7 +665,7 @@ img {vertical-align: middle;}
 		display: none; /* Hide the navigation links by default */
 		flex-direction: column;
 		position: absolute;
-		top: 100%; /* Position below the header */
+		top: 60px; /* Adjust this value as needed */
 		left: 0;
 		width: 100%;
 		background-color: #FDB0C0; /* Ensure the background color is visible */
@@ -676,13 +677,10 @@ img {vertical-align: middle;}
 		display: flex; /* Show the navigation links when active */
 	  }
   
-	.hamburger {
-	  display: flex;
-	  flex-direction: column;
-	  cursor: pointer;
-	  z-index: 3;
-	  margin-left: auto; /* Push hamburger to the right */
-	}
+	  .hamburger {
+		display: flex; /* Show hamburger on mobile */
+		margin-left: auto; /* Push hamburger to the right */
+	  }	
   
 	.hamburger span {
 	  width: 25px;
@@ -835,7 +833,7 @@ img {vertical-align: middle;}
 
   @media (max-width: 768px) {
 	body, html {
-
+	  overflow-x: hidden; /* Prevent horizontal scrolling */
 	  width: 100%;
 	  max-width: 100%;
 	}

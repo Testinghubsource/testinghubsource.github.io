@@ -660,19 +660,19 @@ img {vertical-align: middle;}
 	  font-size: 16px;
 	}
   
-	.header-right{
+	.header-right {
 		display: none; /* Hide the navigation links by default */
 		flex-direction: column;
 		position: absolute;
 		top: 100%; /* Position below the header */
 		left: 0;
 		width: 100%;
-		background-color: #FDB0C0;
-		z-index: 3;
+		background-color: #FDB0C0; /* Ensure the background color is visible */
+		z-index: 1000; /* Ensure it's above other elements */
 		padding: 10px 0;
 	  }
 	
-	  .header-right .active {
+	  .header-right.active {
 		display: flex; /* Show the navigation links when active */
 	  }
   
@@ -835,7 +835,7 @@ img {vertical-align: middle;}
 
   @media (max-width: 768px) {
 	body, html {
-	  overflow-x: hidden; /* Prevent horizontal scrolling */
+
 	  width: 100%;
 	  max-width: 100%;
 	}

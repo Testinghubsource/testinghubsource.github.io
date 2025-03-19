@@ -20,18 +20,21 @@
 	<a href="Baked By Alyssa-Baked Page.html">Baked<br>Goods</a>
 	<a class="active" href="Baked By Alyssa-Contact Page.html">Contact</a>
   </div>
-
+  <script>
+	function toggleMenu() {
+	console.log("Hamburger clicked!"); // Add this to verify the function is called
+	const headerRight = document.querySelector('.header-right');
+	console.log("Header-right element:", headerRight); // Check if the element is found
+	headerRight.classList.toggle('active');
+}
+	  </script>
+	  
   <div class="hamburger" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
   </div>
-  <script>
-function toggleMenu() {
-  const headerRight = document.querySelector('.header-right');
-  headerRight.classList.toggle('active');
-}
-  </script>
+ 
   
 </div>
 </div><br>

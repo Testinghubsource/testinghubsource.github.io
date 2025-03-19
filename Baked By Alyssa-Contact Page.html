@@ -10,33 +10,28 @@
 <body>
 
 <div class="sections2">
-	
-<div id="gradient1" class="header">
- <a href="#default" class="logo"><img src="Images/BBA-logo-noBG.png" width="100%" height="" alt=""/></a>
-  <div class="header-right">
-    <a href="index.html">Home</a>
-	<a href="Baked By Alyssa-About Page.html">About</a>
-    <a href="Baked By Alyssa-Chocolate Page.html">Chocolate<br>Covered</a>
-	<a href="Baked By Alyssa-Baked Page.html">Baked<br>Goods</a>
-	<a class="active" href="Baked By Alyssa-Contact Page.html">Contact</a>
-  </div>
-  <script>
-	function toggleMenu() {
-	console.log("Hamburger clicked!"); // Add this to verify the function is called
-	const headerRight = document.querySelector('.header-right');
-	console.log("Header-right element:", headerRight); // Check if the element is found
-	headerRight.classList.toggle('active');
-}
-	  </script>
-	  
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
- 
-  
-</div>
+	<div id="gradient1" class="header">
+		<a href="#default" class="logo"><img src="Images/BBA-logo-noBG.png" width="100%" height="" alt=""/></a>
+		 <div class="header-right">
+		   <a  href="index.html">Home</a>
+		   <a  href="Baked By Alyssa-About Page.html">About</a>
+		   <a class="active" href="Baked By Alyssa-Chocolate Page.html">Chocolate<br>Covered</a>
+		   <a href="Baked By Alyssa-Baked Page.html">Baked<br>Goods</a>
+		   <a href="Baked By Alyssa-Contact Page.html">Contact</a>
+		 </div>
+		 <div class="hamburger" onclick="toggleMenu()">
+		   <span></span>
+		   <span></span>
+		   <span></span>
+		 </div>
+		 <script>
+		  function toggleMenu() {
+		 const headerRight = document.querySelector('.header-right');
+		 headerRight.classList.toggle('active');
+	   }
+		 </script>
+		 
+	   </div>
 </div><br>
 	
 	<section class="contact">

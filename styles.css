@@ -37,7 +37,11 @@ body {
   position: fixed;
   width: 100%;
   z-index: 10;
-	min-width: 600px;
+  min-width: 600px;
+  display: flex;
+  justify-content: space-between; /* Space out logo and hamburger */
+  align-items: center; /* Vertically center items */
+  padding: 13px 10px;
 }
 
 .header a {
@@ -623,6 +627,21 @@ img {vertical-align: middle;}
 .aboutText .learnMore:hover {
 	background-color: #3e8e41;
 }
+
+.hamburger {
+	display: none; /* Hide by default on desktop */
+	flex-direction: column;
+	cursor: pointer;
+	z-index: 1001;
+  }
+
+  .hamburger span {
+	width: 25px;
+	height: 3px;
+	background-color: black;
+	margin: 4px 0;
+  }
+
 @media screen and (max-width: 768px) {
 	.heading {
 		padding: 0px 20px;
@@ -665,10 +684,9 @@ img {vertical-align: middle;}
 /* Mobile Header */
 @media (max-width: 768px) {
 	.header {
-	  padding: 10px;
-	  position: relative;
-	  overflow: visible;
-	}
+    min-width: unset; /* Remove fixed minimum width */
+    padding: 10px; /* Adjust padding for mobile */
+  }
   
 	.header a {
 	  padding: 10px;
@@ -676,20 +694,20 @@ img {vertical-align: middle;}
 	}
   
 	.header-right {
-	  display: none;
-	  flex-direction: column;
-	  position: absolute;
-	  top: 100%; /* Position below the header */
-	  left: 0;
-	  width: 100%;
-	  background-color: #FDB0C0;
-	  z-index: 1000;
-	  padding: 10px 0;
-	}
+		display: none; /* Hide the navigation links by default */
+		flex-direction: column;
+		position: absolute;
+		top: 100%; /* Position below the header */
+		left: 0;
+		width: 100%;
+		background-color: #FDB0C0;
+		z-index: 1000;
+		padding: 10px 0;
+	  }
   
-	.header-right.active {
-	  display: flex;
-	}
+	  .header-right.active {
+		display: flex; /* Show the navigation links when active */
+	  }
   
 	.hamburger {
 	  display: flex;
@@ -739,7 +757,8 @@ img {vertical-align: middle;}
   
 	.image {
 	  width: 90%;
-	  margin-bottom: 20px;
+	  position: relative;
+	  border-radius: 20px;
 	}
   
 	.image__title {
